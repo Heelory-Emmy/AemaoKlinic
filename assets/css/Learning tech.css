@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Webpage</title>
+  <style>
+    /* General Styling */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
+
+    /* Header Styling */
+    header {
+      background-color: #4caf50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background: #333;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #4caf50;
+    }
+
+    /* Main Content Section */
+    .container {
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      animation: slideIn 1s ease-out;
+    }
+
+    h1, h2 {
+      color: #333;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    /* List Styling */
+    ul {
+      background: #efefef;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    ul li {
+      margin: 5px 0;
+      color: #555;
+    }
+
+    ul li:hover {
+      color: #4caf50;
+    }
+
+    /* Footer Styling */
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #4caf50;
+      color: white;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Welcome to My Interactive Webpage</h1>
+    <p>A demo of HTML, CSS, and Animations</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section id="about">
+      <h2>About Us</h2>
+      <p>We are passionate about building simple, beautiful websites. This page demonstrates some basic HTML, CSS, and animations to get you started!</p>
+      <img src="https://via.placeholder.com/800x400" alt="A placeholder image">
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <p>Here are some things we can do for you:</p>
+      <ul>
+        <li>Web Development</li>
+        <li>Graphic Design</li>
+        <li>SEO Optimization</li>
+        <li>Content Creation</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Feel free to reach out via email: <a href="mailto:info@example.com">info@example.com</a></p>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 My Interactive Webpage. All rights reserved.</p>
+  </footer>
+</body>
+</html>@media (max-width: 768px) {
+    nav a {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    .container {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  }

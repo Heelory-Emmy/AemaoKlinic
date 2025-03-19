@@ -1,0 +1,629 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary-color: #044C5B;
+    --secondary-color: #F5F5F5;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --sidebar-width: 280px;
+    --header-height: 80px;
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F8F9FA;
+    color: var(--text-primary);
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: var(--sidebar-width);
+    height: 100vh;
+    background-color: white;
+    padding: 2rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.logo {
+    margin-bottom: 2.5rem;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-section {
+    margin-bottom: 1.5rem;
+}
+
+.nav-title {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.nav-items {
+    list-style: none;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 0.875rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.nav-item i {
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    width: 24px;
+    text-align: center;
+}
+
+.nav-item.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.nav-item:hover:not(.active) {
+    background-color: var(--secondary-color);
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    object-fit: cover;
+}
+
+.user-info h3 {
+    font-size: 14px;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+}
+
+.user-info p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: var(--sidebar-width);
+    padding: 2rem;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 750px;
+    position: relative;
+}
+
+.search-container i {
+    position: absolute;
+    left: 1rem;
+    color: var(--text-secondary);
+}
+
+.search-container input {
+    width: 100%;
+    padding: 0.875rem 1rem 0.875rem 2.5rem;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: 0.875rem;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.notification {
+    position: relative;
+    cursor: pointer;
+}
+
+.notification i {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+}
+
+.profile-image img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+ul.nav-items a {
+    font-size: 13px;
+    color: grey;
+    line-height: 1px;
+}
+
+/* Page Directory Styles */
+.page-directory {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.page-directory i {
+    font-size: 0.75rem;
+}
+
+/* Calculator Container Layout */
+.calculator-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Left Section Styles */
+.calculator-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.bmr-calculator {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Gender Selector Styles */
+.gender-selector {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.gender-btn {
+    padding: 10px 20px;
+    text-align: center;
+    background: transparent;
+    border-radius: 25px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: var(--transition);
+    border: 1px solid grey;
+}
+
+.gender-btn.active {
+    background: #EAC500;
+    color: white;
+    border: none;
+}
+
+.gender-btn i {
+    margin-right: 0.5rem;
+}
+
+/* Measurement Input Styles */
+.measurement-input {
+    margin-bottom: 2rem;
+}
+
+.flex-me {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.measurement-qty {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.measurement-qty label {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.unit-toggle {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.unit-toggle button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.unit-toggle button.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.input-group input {
+    width: 80px;
+    padding: 0.5rem;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.input-group .unit {
+    color: var(--text-secondary);
+}
+
+/* Slider Styles */
+.slider-container {
+    width: 100%;
+    padding: 0 0.5rem;
+}
+
+input[type="range"] {
+    width: 100%;
+    height: 4px;
+    background: #E5E7EB;
+    border-radius: 2px;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Calculate Button */
+.calculate-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.calculate-btn:hover {
+    background: #033844;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The Right hand Side ------------ */
+/* Right Section Styles */
+.calculator-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.bmi-value {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.value-header {
+    margin-bottom: 1.5rem;
+}
+
+.value-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(4, 76, 91, 0.1);
+    color: var(--primary-color);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.bmi-result {
+    margin-bottom: 0.5rem;
+}
+
+.bmi-result h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.status {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.timestamp {
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.bmi-description {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.action-buttons button {
+    flex: 1;
+    padding: 0.875rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.consult-btn {
+    background: white;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.track-btn {
+    background: var(--primary-color);
+    border: none;
+    color: white;
+}
+
+.health-recommendations {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.health-recommendations h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.recommendation-desc {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+}
+
+.recommendation-card {
+    background: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.card-header i {
+    color: #22C55E;
+    font-size: 1.25rem;
+}
+
+.card-header h4 {
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.recommendation-card p {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.personalized-insights {
+    margin-bottom: 1.5rem;
+}
+
+.personalized-insights p {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+/* Classification Section */
+/* BMI Classification Chart Styles */
+.bmi-classification {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.bmi-classification h3 {
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.chart-description {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+}
+
+.current-bmi {
+    margin-bottom: 2rem;
+}
+
+.current-bmi span {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.bmi-value {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.bmi-value .number {
+    color: #22C55E;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.bmi-value .status {
+    color: var(--text-primary);
+}
+
+.classification-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.classification-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.classification-item .label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+}
+
+.classification-item .range {
+    color: var(--text-secondary);
+}
+
+.bar {
+    height: 32px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.bar span {
+    color: white;
+    font-size: 0.813rem;
+}
+
+/* Bar Colors */
+.bar.underweight {
+    background: #3B82F6;
+}
+
+.bar.normal {
+    background: #22C55E;
+}
+
+.bar.overweight {
+    background: #EAB308;
+}
+
+.bar.obesity {
+    background: #EF4444;
+}
+
+/* Bar Animation */
+.bar {
+    transition: transform 0.3s ease;
+}
+
+.bar:hover {
+    transform: translateX(5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .bmi-classification {
+        padding: 1.5rem;
+    }
+    
+    .bar {
+        height: 28px;
+        padding: 0 0.75rem;
+    }
+    
+    .bar span {
+        font-size: 0.75rem;
+    }
+}

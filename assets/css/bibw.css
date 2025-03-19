@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary-color: #044C5B;
+    --secondary-color: #F5F5F5;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --sidebar-width: 280px;
+    --header-height: 80px;
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F8F9FA;
+    color: var(--text-primary);
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: var(--sidebar-width);
+    height: 100vh;
+    background-color: white;
+    padding: 2rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.logo {
+    margin-bottom: 2.5rem;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-section {
+    margin-bottom: 1.5rem;
+}
+
+.nav-title {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.nav-items {
+    list-style: none;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 0.875rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.nav-item i {
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    width: 24px;
+    text-align: center;
+}
+
+.nav-item.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.nav-item:hover:not(.active) {
+    background-color: var(--secondary-color);
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    object-fit: cover;
+}
+
+.user-info h3 {
+    font-size: 14px;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+}
+
+.user-info p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: var(--sidebar-width);
+    padding: 2rem;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 750px;
+    position: relative;
+}
+
+.search-container i {
+    position: absolute;
+    left: 1rem;
+    color: var(--text-secondary);
+}
+
+.search-container input {
+    width: 100%;
+    padding: 0.875rem 1rem 0.875rem 2.5rem;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: 0.875rem;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.notification {
+    position: relative;
+    cursor: pointer;
+}
+
+.notification i {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+}
+
+.profile-image img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+ul.nav-items a {
+    font-size: 13px;
+    color: grey;
+    line-height: 1px;
+}
+
+/* Page Directory Styles */
+.page-directory {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.page-directory i {
+    font-size: 0.75rem;
+}
+
+/* ------------- IBW Formula Section ---------- */
+.ibw-formula-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.ibw-formula-section h2 {
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Unit Selector Styles */
+.unit-selector {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.unit-btn {
+    min-width: 48px;
+    padding: 0.5rem 1rem;
+    border: 1px solid #E5E7EB;
+    background: white;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.unit-btn.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.unit-btn:hover:not(.active) {
+    background: var(--secondary-color);
+}
+
+/* Formula Container Styles */
+.formula-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formula-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.gender-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.gender-label i {
+    font-size: 1.25rem;
+}
+
+/* Male Formula Styles */
+.formula-item.male .gender-label {
+    color: #0EA5E9;
+    font-weight: 600;
+}
+
+.formula-item.male .gender-label i {
+    color: #0EA5E9;
+}
+
+/* Female Formula Styles */
+.formula-item.female .gender-label {
+    color: #EC4899;
+    font-weight: 600;
+}
+
+.formula-item.female .gender-label i {
+    color: #EC4899;
+}
+
+.formula {
+    font-family: monospace;
+    font-size: 0.875rem;
+    color: var(--text-primary);
+}
+
+/* Responsive Styles */
+@media (max-width: 640px) {
+    .ibw-formula-section {
+        padding: 1.5rem;
+    }
+
+    .unit-selector {
+        flex-wrap: wrap;
+    }
+
+    .unit-btn {
+        flex: 1;
+        min-width: 40px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .formula {
+        font-size: 0.75rem;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 0.5rem;
+    }
+}

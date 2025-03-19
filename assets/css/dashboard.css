@@ -1,0 +1,1194 @@
+/* Base Styles */
+:root {
+    --primary-color: #044C5B;
+    --secondary-color: #F5F5F5;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --sidebar-width: 280px;
+    --header-height: 80px;
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F8F9FA;
+    color: var(--text-primary);
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: var(--sidebar-width);
+    height: 100vh;
+    background-color: white;
+    padding: 2rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.logo {
+    margin-bottom: 2.5rem;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-section {
+    margin-bottom: 1.5rem;
+}
+
+.nav-title {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.nav-items {
+    list-style: none;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 0.875rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.nav-item i {
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    width: 24px;
+    text-align: center;
+}
+
+.nav-item.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.nav-item:hover:not(.active) {
+    background-color: var(--secondary-color);
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    object-fit: cover;
+}
+
+.user-info h3 {
+    font-size: 14px;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+}
+
+.user-info p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: var(--sidebar-width);
+    padding: 2rem;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 750px;
+    position: relative;
+}
+
+.search-container i {
+    position: absolute;
+    left: 1rem;
+    color: var(--text-secondary);
+}
+
+.search-container input {
+    width: 100%;
+    padding: 0.875rem 1rem 0.875rem 2.5rem;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: 0.875rem;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.notification {
+    position: relative;
+    cursor: pointer;
+}
+
+.notification i {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+}
+
+.profile-image img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+ul.nav-items a {
+    font-size: 13px;
+    color: grey;
+    line-height: 1px;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 2rem;
+}
+
+/* Left Section Styles */
+.dashboard-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 610px;
+}
+
+/* Greeting Card */
+.greeting-card {
+    background: linear-gradient(to right, var(--primary-color), #1A73E8);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.greeting-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.greeting-content p {
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.view-btn {
+    background-color: white;
+    color: var(--primary-color);
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Medical Overview */
+.medical-overview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.overview-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* BP Monitoring */
+.bp-monitoring {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.bp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.bp-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.add-new {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.time-filter {
+    padding: 0.5rem;
+    border: 1px solid #E5E7EB;
+    border-radius: 6px;
+}
+
+.bp-graph {
+    height: 300px;
+    /* Graph styling will be handled by JavaScript library */
+}
+
+/* Right Section Styles */
+.dashboard-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Calendar Section */
+.calendar-section {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.calendar-nav {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.calendar-nav button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.add-appointment {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.add-appointment:hover {
+    background-color: #083B73;
+}
+
+/* Calendar Container */
+.calendar-section {
+    font-family: Arial, sans-serif;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    max-width: 350px; 
+    max-height: 425px; 
+    overflow: hidden; 
+}
+
+/* Header */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar-header h3 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Calendar Navigation Buttons */
+.calendar-nav button {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.calendar-nav button:hover {
+    color: var(--secondary-color);
+}
+
+/* Calendar Grid */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-top: 1rem;
+    max-height: 262px;
+    max-width: 305px; 
+    overflow-y: auto; /* Allow vertical scrolling if needed */
+}
+
+.calendar-grid .day-name,
+.calendar-grid .date {
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    font-size: 0.8rem; /* Slightly smaller font to fit dimensions */
+    width: 100%; /* Ensure consistency in grid layout */
+    aspect-ratio: 1; /* Maintain square shape */
+}
+
+.calendar-grid .day-name {
+    font-weight: bold;
+    color: #555;
+}
+
+.calendar-grid .date {
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+
+.calendar-grid .date:hover {
+    background-color: #e0f7fa;
+}
+
+.calendar-grid .date.active {
+    background-color: #00796b;
+    color: #fff;
+}
+
+.calendar-grid .date.has-appointment {
+    position: relative;
+}
+
+.calendar-grid .date.has-appointment::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: #00796b;
+    border-radius: 50%;
+}
+
+.card-content {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 16px;
+    color: #044C5B;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 14px;
+}
+
+img.image {
+    margin-top: 15px;
+    margin-bottom: 19px;
+}
+
+/* Add Appointment Button */
+.add-appointment {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-appointment:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Appointments Section */
+.appointments-section {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.appointments-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.appointments-header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.see-all {
+    color: #EAC500;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.appointments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.appointment-card {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background-color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+.appointment-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.appointment-card img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.appointment-details {
+    flex: 1;
+}
+
+.appointment-details h4 {
+    font-size: 12px;
+    margin-bottom: 0.25rem;
+}
+
+.appointment-details p {
+    font-size: 11px;
+    color: var(--text-secondary);
+}
+
+.appointment-time {
+    font-size: 12px;
+    color: #64748B;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1400px) {
+    .dashboard-container {
+        grid-template-columns: 1fr 340px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .medical-overview {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .dashboard-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        transform: translateX(-100%);
+        z-index: 1000;
+    }
+    
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .medical-overview {
+        grid-template-columns: 1fr;
+    }
+    
+    .header {
+        gap: 1rem;
+    }
+    
+    .search-container {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .main-content {
+        padding: 1rem;
+    }
+    
+    .greeting-card {
+        padding: 1.5rem;
+    }
+    
+    .appointment-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .appointment-card img {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/* ====================== Health Tool Dashbord ====================== */
+span.label {
+    font-weight: 600;
+    font-size: 14px;
+    color: grey;
+}
+
+span.value {
+    font-size: 12px;
+    font-weight: 500;
+    color: black;
+}
+
+span.date {
+    padding-bottom: 20px;
+    font-size: 13px;
+    color: white;
+    font-weight: 400;
+}
+
+.calc-header h3 {
+    color: white;
+    font-size: 16px;
+}
+
+span.number {
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+span.status {
+    color: white;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.section-header h2 {
+    color: #044C5B;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.section-header p {
+    color: #64748B;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+
+
+
+
+/* Dashboard Container */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Left Section Styles */
+.dashboard-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.user-details-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.user-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.user-header img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.medical-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.edit-btn {
+    width: 100%;
+    padding: 0.875rem;
+    background: #044C5B;
+    color: #EAC500;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* Meal Planning Styles */
+.meal-planning {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.section-header {
+    margin-bottom: 2rem;
+}
+
+.search-meal {
+    margin-top: 1rem;
+}
+
+.search-meal input {
+    width: 100%;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+}
+
+.day-selector {
+    margin-bottom: 1.5rem;
+}
+
+.day {
+    color: #044C5B;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.day-selector {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.meals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.meal-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .5rem;
+    background: var(--secondary-color);
+    border-radius: 8px;
+}
+
+.meal-info h4 {
+    font-size: 14px;
+    line-height: 45px;
+}
+
+.meal-tags {
+    display: flex;
+    color: grey;
+    gap: 45px;
+    font-size: 12px;
+}
+
+a.check-btn {
+    font-size: 12px;
+    font-weight: 400;
+    color: grey;
+}
+
+.meal-item img {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.educational-resources h2 {
+    font-size: 16px;
+    color: #044C5B;
+    padding-bottom: 15px;
+}
+
+.educational-resources p {
+    color: #64748B;
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+.bmr-icons img {
+    width: 420px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+.resource-item h4 {
+    font-size: 12px;
+    color: grey;
+    font-weight: 600;
+}
+
+/* Right Section Styles */
+.calculators-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.calculator-card {
+    background: white;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.calc-header {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: left;
+    margin-bottom: 1rem;
+}
+
+.calc-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.result {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.calculate-btn {
+    display: flex;
+    color: white;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.calculate-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Educational Resources Styles */
+.educational-resources {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.bmr-icons {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.icon-item {
+    text-align: center;
+}
+
+.icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.icon.basal { background: #00BFA6; }
+.icon.metabolic { background: #FF9800; }
+.icon.rate { background: #F44336; }
+
+.resources-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.resource-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--secondary-color);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .dashboard-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .calculators-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .meal-item {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+
+
+
+/* Add these new styles */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.sidebar-close {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+/* Modify your existing sidebar styles */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: var(--sidebar-width);
+    height: 100vh;
+    background-color: white;
+    padding: 2rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* Modify your media queries */
+@media screen and (max-width: 992px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .sidebar-close {
+        display: block;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    /* Add overlay when sidebar is open */
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    .sidebar-overlay.active {
+        display: block;
+    }
+}
+
+/* Other responsive adjustments */
+@media screen and (max-width: 768px) {
+    .dashboard-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .medical-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .search-container {
+        order: 2;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add or modify these styles in your CSS */
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 0.875rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Add subtle animation for the active state */
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #EAC500; /* Or any accent color you prefer */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.nav-item.active::after {
+    transform: translateX(0);
+}
+
+/* Enhance the icon transition */
+.nav-item i {
+    transition: transform 0.3s ease;
+}
+
+.nav-item:hover i,
+.nav-item.active i {
+    transform: scale(1.1);
+}
