@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aemao Klinic - Building a community of health and Nutrition</title>
+    <link rel="stylesheet" href="./assets/css/bpmonitoring.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="./assets/images/Logo.png" alt="Olamo Logo">
+        </div>
+
+        <!-- Apps Navigation -->
+        <nav class="nav-section">
+            <h2 class="nav-title">Apps</h2>
+            <ul class="nav-items">
+                <li><a href="#" class="nav-item active"><i class="fas fa-th-large"></i>Dashboard</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-heartbeat"></i>Health Tools</a></li>
+                <li><a href="#" class="nav-item"><i class="far fa-calendar-alt"></i>Appointments</a></li>
+                <li><a href="#" class="nav-item"><i class="far fa-envelope"></i>Messages</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-file-medical"></i>Health Records</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-book"></i>Educational Resources</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-credit-card"></i>Billing and Payments</a></li>
+            </ul>
+        </nav>
+
+        <!-- Account Navigation -->
+        <nav class="nav-section">
+            <h2 class="nav-title">Account</h2>
+            <ul class="nav-items">
+                <li><a href="#" class="nav-item"><i class="fas fa-cog"></i>Settings</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-sign-out-alt"></i>Log Out</a></li>
+                <li><a href="#" class="nav-item"><i class="far fa-user"></i>Profile</a></li>
+            </ul>
+        </nav>
+
+        <!-- User Profile -->
+        <div class="user-profile">
+            <img src="./assets/images/profilepic.png" alt="Olafemi Andrew">
+            <div class="user-info">
+                <h3>Olafemi Andrew</h3>
+                <p>Software Engineer</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="search" placeholder="Search Meal plans, appointment...">
+            </div>
+            <div class="header-right">
+                <div class="notification">
+                    <i class="far fa-bell"></i>
+                </div>
+                <div class="profile-image">
+                    <img src="./assets/images/profilepic.png" alt="Profile">
+                </div>
+            </div>
+        </header>
+
+        <!-- Add this inside your main-content section, after the header -->
+        <div class="page-directory">
+            <span>Health Tools</span>
+            <i class="fas fa-chevron-right"></i>
+            <span>BP Monitoring</span>
+        </div>
+
+        <!-- Add this after the page-directory div in your main content -->
+<div class="monitoring-container">
+    <!-- Left Section -->
+    <div class="monitoring-left">
+        <!-- BP Monitoring Graph -->
+        <div class="bp-graph-section">
+            <div class="graph-header">
+                <div class="reading-info">
+                    <h2>BP Monitoring</h2>
+                    <div class="current-reading">100mmHg, Normal</div>
+                </div>
+                <div class="graph-controls">
+                    <button class="add-reading">+ Add new goal</button>
+                    <select class="time-range">
+                        <option>Daily</option>
+                        <option>Weekly</option>
+                        <option>Monthly</option>
+                    </select>
+                </div>
+            </div>
+            <div class="graph-container">
+                <div class="y-axis">
+                    <span>180mmHg</span>
+                    <span>140mmHg</span>
+                    <span>120mmHg</span>
+                    <span>80mmHg</span>
+                    <span>40mmHg</span>
+                </div>
+                <div class="graph-area">
+                    <!-- Graph will be rendered here by JavaScript -->
+                    <canvas id="bpChart"></canvas>
+                </div>
+                <div class="x-axis">
+                    <span>Mon</span>
+                    <span>Tue</span>
+                    <span>Wed</span>
+                    <span>Thu</span>
+                    <span>Fri</span>
+                    <span>Sat</span>
+                    <span>Sun</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- BP Insights -->
+        <div class="bp-insights">
+            <h2>Your Personalized BMR Insights</h2>
+            <p>Discover how your Blood Metabolic Rate impacts your daily energy needs and get tailored recommendations to achieve your health goals</p>
+            
+            <div class="insight-card normal">
+                <div class="insight-content">
+                    <img src="./assets/images/icon3.png" alt="" srcset="">
+                    <h3>Normal Range</h3>
+                </div>
+                <p>Your BP readings are consistently within the healthy range. Keep maintaining your current lifestyle to support heart health.</p>
+            </div>
+
+            <div class="insight-card warning">
+                <div class="insight-content">
+                    <img src="./assets/images/icon4.png" alt="" srcset="">
+                    <h3>Elevated/High BP</h3>
+                </div>
+                <p>High blood pressure, detected for the past week. We recommend scheduling an appointment with your healthcare provider.</p>
+            </div>
+
+            <button class="schedule-btn">Schedule Consultation</button>
+        </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="monitoring-right">
+        <!-- Current Reading -->
+        <div class="current-reading-card">
+            <div class="icon-temp">
+                <img src="./assets/images/icon2.png" alt="" srcset="">
+                <h2>Current BP Reading</h2>
+            </div>
+            <div class="bpreadings">
+                <p class="reading-value">100mmHg</p>
+                <p class="reading-status">Normal</p>
+            </div>
+            <div class="reading-time">Sept 13, 2024, 8:30 AM</div>
+            <button class="add-reading-btn">+ Add New Reading</button>
+        </div>
+
+        <!-- BP History -->
+        <div class="bp-history">
+            <div class="history-header">
+                <div class="history-headings">
+                    <h2>Blood Pressure History</h2>
+                    <p>Review your blood pressure readings</p>
+                </div>
+                <select class="history-range">
+                    <option>Daily</option>
+                    <option>Weekly</option>
+                    <option>Monthly</option>
+                </select>
+            </div>
+
+            <div class="history-list">
+                <div class="history-item normal">
+                    <div class="history-icon">
+                        <img src="./assets/images/icon5.png" alt="" srcset="">
+                    </div>
+                    <div class="reading-info">
+                        <span class="reading">120/80 mmHg</span>
+                        <span class="timestamp">Sept 12, 2024, 8:00 AM</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="history-item elevated">
+                    <div class="history-icon">
+                        <img src="./assets/images/icon6.png" alt="" srcset="">
+                    </div>
+                    <div class="reading-info">
+                        <span class="reading">122/85 mmHg</span>
+                        <span class="timestamp">Sept 12, 2024, 9:30 AM</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="history-item normal">
+                    <div class="history-icon">
+                        <img src="./assets/images/icon5.png" alt="" srcset="">
+                    </div>
+                    <div class="reading-info">
+                        <span class="reading">118/78 mmHg</span>
+                        <span class="timestamp">Sept 12, 2024, 10:00 AM</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="history-item normal">
+                    <div class="history-icon">
+                        <img src="./assets/images/icon7.png" alt="" srcset="">
+                    </div>
+                    <div class="reading-info">
+                        <span class="reading">120/80 mmHg</span>
+                        <span class="timestamp">Sept 12, 2024, 8:00 AM</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="history-item elevated">
+                    <div class="history-icon">
+                        <img src="./assets/images/icon8.png" alt="" srcset="">
+                    </div>
+                    <div class="reading-info">
+                        <span class="reading">122/85 mmHg</span>
+                        <span class="timestamp">Sept 12, 2024, 9:30 AM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>

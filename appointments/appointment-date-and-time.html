@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aemao Klinic - Building a community of health and Nutrition</title>
+    <link rel="stylesheet" href="../assets/css/doctorappointment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="../assets/images/Logo.png" alt="Aemao Klinic">
+        </div>
+
+        <!-- Apps Navigation -->
+        <nav class="nav-section">
+            <h2 class="nav-title">Apps</h2>
+            <ul class="nav-items">
+                <li><a href="#" class="nav-item active"><i class="fas fa-th-large"></i>Dashboard</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-heartbeat"></i>Health Tools</a></li>
+                <li><a href="#" class="nav-item"><i class="far fa-calendar-alt"></i>Appointments</a></li>
+                <li><a href="#" class="nav-item"><i class="far fa-envelope"></i>Messages</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-file-medical"></i>Health Records</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-book"></i>Educational Resources</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-credit-card"></i>Billing and Payments</a></li>
+            </ul>
+        </nav>
+
+        <!-- Account Navigation -->
+        <nav class="nav-section">
+            <h2 class="nav-title">Account</h2>
+            <ul class="nav-items">
+                <li><a href="#" class="nav-item"><i class="fas fa-cog"></i>Settings</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-sign-out-alt"></i>Log Out</a></li>
+                <li><a href="#" class="nav-item"><i class="far fa-user"></i>Profile</a></li>
+            </ul>
+        </nav>
+
+        <!-- User Profile -->
+        <div class="user-profile">
+            <img src="../assets/images/profilepic.png" alt="Olafemi Andrew">
+            <div class="user-info">
+                <h3>Olafemi Andrew</h3>
+                <p>Software Engineer</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="search" placeholder="Search Meal plans, appointment...">
+            </div>
+            <div class="header-right">
+                <div class="notification">
+                    <i class="far fa-bell"></i>
+                </div>
+                <div class="profile-image">
+                    <img src="../assets/images/profilepic.png" alt="Profile">
+                </div>
+            </div>
+        </header>
+
+        <!-- Add this inside main-content, after header -->
+        <section class="appointment-section">
+            <h1>Schedule a <span class="highlight">New Appointment</span></h1>
+            <p class="section-description">Book an appointment with your preferred healthcare provider based on your availability and healthcare needs.</p>
+            
+            <div class="appointment-steps">
+                <div class="step-card">
+                    <div class="icon-container active">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <p>Search for and choose a doctor</p>
+                </div>
+                <div class="step-card">
+                    <div class="icon-container active">
+                        <i class="far fa-clock"></i>
+                    </div>
+                    <p>Select appointment type</p>
+                </div>
+                <div class="step-card current">
+                    <div class="icon-container active">
+                        <i class="far fa-calendar"></i>
+                    </div>
+                    <p>Select Date and Time</p>
+                </div>
+                <div class="step-card">
+                    <div class="icon-container">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <p>Review and Confirm</p>
+                </div>
+            </div>
+
+            <div class="date-time-section">
+                <h3>Date & Time</h3>
+                <p>Pick a date and time that fits your schedule.</p>
+
+                <div class="scheduling-container">
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            <button class="month-nav prev"><i class="fas fa-chevron-left"></i></button>
+                            <h4 class="current-month">April 2024</h4>
+                            <button class="month-nav next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="weekdays">
+                            <span>Sun</span>
+                            <span>Mon</span>
+                            <span>Tue</span>
+                            <span>Wed</span>
+                            <span>Thu</span>
+                            <span>Fri</span>
+                            <span>Sat</span>
+                        </div>
+                        <div class="calendar-grid" id="calendar-days">
+                            <!-- Days will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="time-selector">
+                        <h4>Set time</h4>
+                        <div class="time-inputs">
+                            <div class="time-input">
+                                <input type="number" id="hours" min="1" max="12" value="06">
+                                <span>:</span>
+                                <input type="number" id="minutes" min="0" max="59" value="28">
+                                <input type="number" id="seconds" min="0" max="59" value="54">
+                                <select id="meridiem">
+                                    <option value="AM">AM</option>
+                                    <option value="PM" selected>PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn-cancel">Cancel</button>
+                            <button class="btn-save">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>

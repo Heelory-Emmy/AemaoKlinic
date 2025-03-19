@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aemao Klinic - Building a community of health and Nutrition</title>
+    <link rel="stylesheet" href="../assets/css/confirm-appointment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="../assets/images/Logo.png" alt="Aemao Klinic">
+        </div>
+
+        <!-- Apps Navigation -->
+        <nav class="nav-section">
+            <h2 class="nav-title">Apps</h2>
+            <ul class="nav-items">
+                <li><a href="#" class="nav-item active"><i class="fas fa-th-large"></i>Dashboard</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-heartbeat"></i>Health Tools</a></li>
+                <li><a href="#" class="nav-item"><i class="far fa-calendar-alt"></i>Appointments</a></li>
+                <li><a href="#" class="nav-item"><i class="far fa-envelope"></i>Messages</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-file-medical"></i>Health Records</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-book"></i>Educational Resources</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-credit-card"></i>Billing and Payments</a></li>
+            </ul>
+        </nav>
+
+        <!-- Account Navigation -->
+        <nav class="nav-section">
+            <h2 class="nav-title">Account</h2>
+            <ul class="nav-items">
+                <li><a href="#" class="nav-item"><i class="fas fa-cog"></i>Settings</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-sign-out-alt"></i>Log Out</a></li>
+                <li><a href="#" class="nav-item"><i class="far fa-user"></i>Profile</a></li>
+            </ul>
+        </nav>
+
+        <!-- User Profile -->
+        <div class="user-profile">
+            <img src="../assets/images/profilepic.png" alt="Olafemi Andrew">
+            <div class="user-info">
+                <h3>Olafemi Andrew</h3>
+                <p>Software Engineer</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="search" placeholder="Search Meal plans, appointment...">
+            </div>
+            <div class="header-right">
+                <div class="notification">
+                    <i class="far fa-bell"></i>
+                </div>
+                <div class="profile-image">
+                    <img src="../assets/images/profilepic.png" alt="Profile">
+                </div>
+            </div>
+        </header>
+
+        <!-- Add this inside main-content, after the header -->
+        <div class="appointment-container">
+            <!-- Title Section -->
+            <div class="appointment-header">
+                <h1>Schedule a <span class="gradient-text">New Appointment</span></h1>
+                <p>Book an appointment with your preferred healthcare provider based on your availability and healthcare needs.</p>
+            </div>
+
+            <!-- Progress Steps -->
+            <div class="progress-steps">
+                <div class="step active">
+                    <p>Search for and choose a doctor or specialist from our MC</p>
+                    <div class="step-icon">
+                        <img src="../assets/images/doctor-01.png" alt="User icon">
+                    </div>
+                </div>
+                <div class="step active">
+                    <p>Select how you would like to attend your appointment</p>
+                    <div class="step-icon">
+                        <img src="../assets/images/medium.png" alt="Video icon">
+                    </div>
+                </div>
+                <div class="step active">
+                    <p>Select a Date and Time for Your Appointment</p>
+                    <div class="step-icon">
+                        <img src="../assets/images/calendar-02-white.png" alt="Calendar icon">
+                    </div>
+                </div>
+                <div class="step active">
+                    <p>Review and Confirm Your Appointment Details</p>
+                    <div class="step-icon">
+                        <img src="../assets/images/checkmark-circle-03-white.png" alt="Check icon">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Consultation Section -->
+            <section class="consultation-section">
+                <h2>Please review your appointment details before confirming.</h2>
+
+                <!-- Doctor Info -->
+                <div class="profile-section">
+                    <label>Doctor</label>
+                    <div class="profile-content">
+                        <img src="../assets/images/doctor black 4.png" alt="Dr. Mathew White" class="profile-image-sm">
+                        <div class="profile-details">
+                            <h4>Dr. Mathew White</h4>
+                            <p>Nutritionist</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Consultation Type -->
+                <div class="consultation-type-section">
+                    <label>Consultation type</label>
+                    <div class="consultation-type">
+                        <i class="fas fa-video"></i>
+                        <div class="consultation-info">
+                            <p><span style="font-weight: 600; ">Video Call:</span> Attend the appointment from the comfort of your home using a secure video connection</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Date & Time -->
+                <div class="datetime-section">
+                    <label>Date & Time</label>
+                    <div class="datetime-content">
+                        <i class="far fa-calendar"></i>
+                        <p>September 25, 2024, 10:00 AM</p>
+                    </div>
+                </div>
+
+                <!-- Additional Notes -->
+                <div class="notes-section">
+                    <label>Additional Notes</label>
+                    <div class="icon-input">
+                        <i class="far fa-clipboard"></i>
+                        <textarea placeholder="Reason for appointment - Type here"></textarea>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="button-group">
+                    <button class="btn-primary">Confirm Appointment</button>
+                    <button class="btn-secondary">Edit Appointment Details</button>
+                </div>
+            </section>
+
+        </div>
+        
+        
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aemao Klinic - Building a community of health and Nutrition</title>
+    <link rel="stylesheet" href="./assets/css/bibw.css">
+    <link rel="stylesheet" href="./assets/css/bmr.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="./assets/images/Logo.png" alt="Olamo Logo">
+        </div>
+
+        <!-- Apps Navigation -->
+        <nav class="nav-section">
+            <h2 class="nav-title">Apps</h2>
+            <ul class="nav-items">
+                <li><a href="#" class="nav-item active"><i class="fas fa-th-large"></i>Dashboard</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-heartbeat"></i>Health Tools</a></li>
+                <li><a href="#" class="nav-item"><i class="far fa-calendar-alt"></i>Appointments</a></li>
+                <li><a href="#" class="nav-item"><i class="far fa-envelope"></i>Messages</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-file-medical"></i>Health Records</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-book"></i>Educational Resources</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-credit-card"></i>Billing and Payments</a></li>
+            </ul>
+        </nav>
+
+        <!-- Account Navigation -->
+        <nav class="nav-section">
+            <h2 class="nav-title">Account</h2>
+            <ul class="nav-items">
+                <li><a href="#" class="nav-item"><i class="fas fa-cog"></i>Settings</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-sign-out-alt"></i>Log Out</a></li>
+                <li><a href="#" class="nav-item"><i class="far fa-user"></i>Profile</a></li>
+            </ul>
+        </nav>
+
+        <!-- User Profile -->
+        <div class="user-profile">
+            <img src="./assets/images/profilepic.png" alt="Olafemi Andrew">
+            <div class="user-info">
+                <h3>Olafemi Andrew</h3>
+                <p>Software Engineer</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="search" placeholder="Search Meal plans, appointment...">
+            </div>
+            <div class="header-right">
+                <div class="notification">
+                    <i class="far fa-bell"></i>
+                </div>
+                <div class="profile-image">
+                    <img src="./assets/images/profilepic.png" alt="Profile">
+                </div>
+            </div>
+        </header>
+
+        <!-- Add this inside your main-content section, after the header -->
+        <div class="page-directory">
+            <span>Health Tools</span>
+            <i class="fas fa-chevron-right"></i>
+            <span>Ideal Body Weight (IBW)</span>
+        </div>
+
+        <div class="calculator-container">
+            <!-- Left Section -->
+            <div class="calculator-left">
+                <div class="bmr-calculator">
+                    <div class="gender-selector">
+                        <a href="#" class="gender-btn active" data-gender="male">
+                            <i class="fas fa-male"></i> Male
+                        </a>
+                        <a href="#" class="gender-btn" data-gender="female">
+                            <i class="fas fa-female"></i> Female
+                        </a>
+                    </div>
+
+                    <div class="measurement-input">
+                        <div class="flex-me">
+                            <div class="measurement-qty">
+                                <label>Height</label>
+                                <div class="unit-toggle">
+                                    <button class="active">Ft</button>
+                                    <button>Cm</button>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <input type="number" id="feet" placeholder="5" min="4" max="8">
+                                <span class="unit">'</span>
+                                <input type="number" id="inches" placeholder="11" min="0" max="11">
+                                <span class="unit">"</span>
+                            </div>
+                        </div>
+                        <div class="slider-container">
+                            <input type="range" id="height-slider" min="48" max="96" value="71">
+                        </div>
+                    </div>
+
+                    <div class="measurement-input">
+                        <div class="flex-me">
+                            <div class="measurement-qty">
+                                <label>Weight</label>
+                                <div class="unit-toggle">
+                                    <button class="active">Pounds</button>
+                                    <button>Kg</button>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <input type="number" id="weight" placeholder="70.53">
+                            </div>
+                        </div>
+                        <div class="slider-container">
+                            <input type="range" id="weight-slider" min="40" max="200" value="70">
+                        </div>
+                    </div>
+
+                    <button id="calculate-bmr" class="calculate-btn">Calculate BMR</button>
+                </div>
+                <!-- IBW Formula Used -->
+                <div class="ibw-formula-section">
+                    <h2>IBW Formula Used</h2>
+                    <p class="subtitle">Choose with unit of measurement you would like to use.</p>
+                    
+                    <div class="unit-selector">
+                        <button class="unit-btn active" data-unit="Ft">Ft</button>
+                        <button class="unit-btn" data-unit="M">M</button>
+                        <button class="unit-btn" data-unit="In">In</button>
+                        <button class="unit-btn" data-unit="Cm">Cm</button>
+                    </div>
+                
+                    <div class="formula-container">
+                        <div class="formula-item male">
+                            <div class="gender-label">
+                                <i class="fas fa-male"></i>
+                                <span>For Males</span>
+                            </div>
+                            <div class="formula">
+                                IBW=50+2.3×(Height in inches−60)
+                            </div>
+                        </div>
+
+                        <hr>
+                
+                        <div class="formula-item female">
+                            <div class="gender-label">
+                                <i class="fas fa-female"></i>
+                                <span>For Females</span>
+                            </div>
+                            <div class="formula">
+                                IBW=45.5+2.3×(Height in inches−60)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Educational Resources section placeholder -->
+                <div class="educational-resources">
+                    <h2>Educational Resources</h2>
+                    <p>Explore Articles and Guides on How to Use Your BMR to Meet Your Health Goals</p>
+                    
+                    <div class="resources-visual">
+                        <!-- BMR Visual -->
+                        <div class="bmr-icons">
+                            <img src="./assets/images/resource.png" alt="" srcset="">
+                        </div>
+                    </div>
+
+                    <div class="resources-list">
+                        <div class="resource-item">
+                            <h4>What is BMR and Why is it Important for Your Health?</h4>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div class="resource-item">
+                            <h4>How to Adjust Your Diet Based on Your TDEE</h4>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div class="resource-item">
+                            <h4>Understanding Caloric Deficits and Surpluses</h4>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Section -->
+            <div class="calculator-right">
+                <div class="bmr-result">
+                    <div class="result-header">
+                        <div class="icon-title">
+                            <img src="./assets/images/icon1.png" alt="" srcset="">
+                            <h3>BMR Value</h3>
+                        </div>
+                        <div class="result-value">1,600 calories/day</div>
+                        <div class="result-date">Sept 15, 2024, 8:00 AM</div>
+                    </div>
+                    <hr>
+                    <p class="result-description">
+                        This means that your body needs approximately 1,600 calories per day to maintain basic functions. If you consume this amount, you will neither gain nor lose weight unless additional physical activity is considered.
+                    </p>
+                </div>
+
+                <div class="recommendations">
+                    <h3>Personalized Recommendations Based on Your BMR</h3>
+                    <p>Tailored guidance to help you achieve your health and fitness goals by adjusting your caloric intake based on your Basal Metabolic Rate (BMR).</p>
+                    
+                    <div class="recommendation-card maintenance">
+                        <div class="card-header">
+                            <i class="fas fa-balance-scale"></i>
+                            <h4>Weight Maintenance Recommendation</h4>
+                        </div>
+                        <p>To maintain your current weight, aim to consume approximately 2,400 calories per day based on your activity level.</p>
+                        <p class="tip">Tip: Keep your calorie intake consistent with your activity level and incorporate meals with a variety of nutrients to sustain your energy throughout the day.</p>
+                        <button class="read-more">Read More</button>
+                    </div>
+
+                    <div class="recommendation-card weight-loss">
+                        <div class="card-header2">
+                            <i class="fa-solid fa-scale-unbalanced"></i>
+                            <h4>Weight Loss Recommendation</h4>
+                        </div>
+                        <p>To lose weight, aim for a daily intake of 1,700-1,900 calories/day. This caloric deficit will help you lose approximately 1-1.5 lbs per week.</p>
+                        <p class="tip">Tip: Incorporate regular physical activity such as cardio, strength training, and flexibility exercises to enhance fat loss while maintaining muscle mass.</p>
+                        <button class="read-more">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>

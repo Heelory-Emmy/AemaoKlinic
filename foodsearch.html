@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aemao Klinic - Building a community of health and Nutrition</title>
+    <link rel="stylesheet" href="./assets/css/foodsearch.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="./assets/images/Logo.png" alt="Olamo Logo">
+            </div>
+            <div class="profile">
+                <img src="./assets/images/profilepic.png" alt="User Profile">
+            </div>
+        </div>
+        <div class="header-border"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Search Container -->
+        <div class="search-container">
+            <h2>Select Food Type</h2>
+            <div class="select-wrapper">
+                <select id="foodType" class="food-type-select">
+                    <option value="nigerian">Nigerian Food</option>
+                    <!-- Add other options as needed -->
+                </select>
+            </div>
+        </div>
+
+        <!-- Options Container -->
+        <div class="options-container">
+            <button class="option-btn active" data-target="food-search">Food Search</button>
+            <button class="option-btn border" data-target="nutrient-search">Nutrient Search</button>
+            <button class="option-btn border" data-target="multi-food-search">Multi Food Search</button>
+            <button class="option-btn border" data-target="multi-nutrient-search">Multi Nutrient Search</button>
+        </div>
+
+        <!-- Forms Container -->
+        <div class="forms-container">
+            <!-- Food Search Form -->
+            <div id="food-search" class="main-search-container active">
+                <div class="search-section">
+                    <select id="foodGroups" class="search-select">
+                        <option value="" disabled selected>Food Groups</option>
+                        <!-- Add food group options -->
+                    </select>
+                </div>
+                <div class="search-section">
+                    <select id="food" class="search-select">
+                        <option value="" disabled selected>Food</option>
+                        <!-- Add food options -->
+                    </select>
+                </div>
+                <div class="search-section">
+                    <input type="number" id="weight" class="weight-input" placeholder="Weight(g)">
+                </div>
+                <button class="search-btn">Search</button>
+            </div>
+
+            <!-- Nutrient Search Form -->
+            <div id="nutrient-search" class="main-search-container">
+                <!-- Content for Nutrient Search -->
+                <input type="text" placeholder="Search Nutrient" class="weight-input">
+                <button class="search-btn">Search</button>
+            </div>
+
+            <!-- Multi Food Search Form -->
+            <div id="multi-food-search" class="main-search-container">
+                <!-- Content for Multi Food Search -->
+                <textarea placeholder="Enter multiple food items" class="weight-input"></textarea>
+                <button class="search-btn">Search</button>
+            </div>
+
+            <!-- Multi Nutrient Search Form -->
+            <div id="multi-nutrient-search" class="main-search-container">
+                <!-- Content for Multi Nutrient Search -->
+                <textarea placeholder="Enter multiple nutrients" class="weight-input"></textarea>
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+
+
+        <!-- Scroll to Top Button -->
+        <button id="scrollTop" class="scroll-top-btn">
+            <span class="arrow-up">↑</span>
+        </button>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>

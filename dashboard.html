@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aemao Klinic - Building a community of health and Nutrition</title>
+    <link rel="stylesheet" href="./assets/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <button class="sidebar-close" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <div class="logo">
+            <img src="./assets/images/Logo.png" alt="Olamo Logo">
+        </div>
+
+        <!-- Apps Navigation -->
+        <nav class="nav-section">
+            <h2 class="nav-title">Apps</h2>
+            <ul class="nav-items">
+                <li><a href="#" class="nav-item active"><i class="fas fa-th-large"></i>Dashboard</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-heartbeat"></i>Health Tools</a></li>
+                <li><a href="#" class="nav-item"><i class="far fa-calendar-alt"></i>Appointments</a></li>
+                <li><a href="#" class="nav-item"><i class="far fa-envelope"></i>Messages</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-file-medical"></i>Health Records</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-book"></i>Educational Resources</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-credit-card"></i>Billing and Payments</a></li>
+            </ul>
+        </nav>
+
+        <!-- Account Navigation -->
+        <nav class="nav-section">
+            <h2 class="nav-title">Account</h2>
+            <ul class="nav-items">
+                <li><a href="#" class="nav-item"><i class="fas fa-cog"></i>Settings</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-sign-out-alt"></i>Log Out</a></li>
+                <li><a href="#" class="nav-item"><i class="far fa-user"></i>Profile</a></li>
+            </ul>
+        </nav>
+
+        <!-- User Profile -->
+        <div class="user-profile">
+            <img src="./assets/images/profilepic.png" alt="Olafemi Andrew">
+            <div class="user-info">
+                <h3>Olafemi Andrew</h3>
+                <p>Software Engineer</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="search" placeholder="Search Meal plans, appointment...">
+            </div>
+            <div class="header-right">
+                <div class="notification">
+                    <i class="far fa-bell"></i>
+                </div>
+                <div class="profile-image">
+                    <img src="./assets/images/profilepic.png" alt="Profile">
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-container">
+            <!-- Left Section -->
+            <div class="dashboard-left">
+                <!-- Greeting Card -->
+                <div class="greeting-card">
+                    <div class="greeting-content">
+                        <h2>Good Morning, Olafemi</h2>
+                        <p>You have 2 health task today</p>
+                        <button class="view-btn">View</button>
+                    </div>
+                </div>
+
+                <!-- Medical Overview -->
+                <div class="medical-overview">
+                    <div class="overview-card bmi">
+                        <div class="card-content">
+                            <h3>BMI Calculator</h3>
+                            <img src="./assets/images/Chart.png" alt="Healthy Chart" srcset="">
+                            <p class="bmi-chart">25% Healthy weight</p>
+                        </div>
+                    </div>
+                    <div class="overview-card bp">
+                        <div class="card-content">
+                            <h3>BP Monitoring</h3>
+                            <img src="./assets/images/blood-pressure.png" alt="Blood Pressure" class="image">
+                            <p class="bp-info">Less than 120- Normal</p>
+                        </div>
+                    </div>
+                    <div class="overview-card meal">
+                        <div class="card-content">
+                            <h3>Meal Planning</h3>
+                            <img src="./assets/images/vegetarian-food.png" alt="Food" class="image">
+                            <p class="meal-info">Sweet Potato</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BP Monitoring Graph -->
+                <div class="bp-monitoring">
+                    <div class="bp-header">
+                        <h3>BP Monitoring</h3>
+                        <div class="bp-actions">
+                            <button class="add-new">Add new goal</button>
+                            <select class="time-filter">
+                                <option>Daily</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="bp-graph">
+                        <!-- Graph will be added via JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Section -->
+            <div class="dashboard-right">
+                <!-- Calendar -->
+                <div class="calendar-section">
+                    <div class="calendar-header">
+                        <div class="calendar-nav">
+                            <button class="prev-month"><i class="fas fa-chevron-left"></i></button>
+                        </div>
+                        <h3 id="current-month"></h3>
+                        <div class="calendar-nav">
+                            <button class="next-month"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="calendar-grid">
+                        <!-- Calendar will be populated via JavaScript -->
+                    </div>
+                    <button class="add-appointment">Add New Appointment</button>
+                </div>
+
+                <!-- Upcoming Appointments -->
+                <div class="appointments-section">
+                    <div class="appointments-header">
+                        <h3>Upcoming Appointments</h3>
+                        <a href="#" class="see-all">See all</a>
+                    </div>
+
+                    <div class="appointments-list">
+                        <div class="appointment-card">
+                            <img src="./assets/images/doctor5.png" alt="Dr. Matthew White">
+                            <div class="appointment-details">
+                                <h4>General Check-up</h4>
+                                <p>Dr. Matthew White</p>
+                            </div>
+                            <span class="appointment-time">09:30am</span>
+                        </div>
+                        
+                        <div class="appointment-card">
+                            <img src="./assets/images/doctor4.png" alt="Dr. Matthew White">
+                            <div class="appointment-details">
+                                <h4>Nutrition and Dietetics</h4>
+                                <p>Dr. Sarah Black</p>
+                            </div>
+                            <span class="appointment-time">09:00am</span>
+                        </div>
+
+                        <div class="appointment-card">
+                            <img src="./assets/images/doctor1.png" alt="Dr. Matthew White">
+                            <div class="appointment-details">
+                                <h4>Lifestyle and fitness coach</h4>
+                                <p>Dr. Amanda Green</p>
+                            </div>
+                            <span class="appointment-time">10:30am</span>
+                        </div>
+
+                        <div class="appointment-card">
+                            <img src="./assets/images/doctor3.png" alt="Dr. Matthew White">
+                            <div class="appointment-details">
+                                <h4>Pediatrics</h4>
+                                <p>Dr. James Brown</p>
+                            </div>
+                            <span class="appointment-time">12:15pm</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sidebarClose = document.querySelector('.sidebar-close');
+            const sidebar = document.querySelector('.sidebar');
+            const main = document.querySelector('.main-content');
+            
+            // Create overlay element
+            const overlay = document.createElement('div');
+            overlay.className = 'sidebar-overlay';
+            document.body.appendChild(overlay);
+
+            // Toggle sidebar
+            function toggleSidebar() {
+                sidebar.classList.toggle('active');
+                overlay.classList.toggle('active');
+                document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+            }
+
+            // Event listeners
+            menuToggle.addEventListener('click', toggleSidebar);
+            sidebarClose.addEventListener('click', toggleSidebar);
+            overlay.addEventListener('click', toggleSidebar);
+
+            // Close sidebar on window resize if it's open
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 992 && sidebar.classList.contains('active')) {
+                    sidebar.classList.remove('active');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
+
+
+
+        // ============== active navigation link ===================
+
+        // Add this to your existing JavaScript file
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all navigation links
+            const navLinks = document.querySelectorAll('.nav-item');
+            
+            // Get the current path from localStorage if it exists
+            const currentPath = localStorage.getItem('activePath') || '/dashboard';
+            
+            // Function to set active link
+            function setActiveLink(clickedLink) {
+                // Remove active class from all links
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
+                
+                // Add active class to clicked link
+                clickedLink.classList.add('active');
+                
+                // Store the active path in localStorage
+                const path = clickedLink.getAttribute('href');
+                localStorage.setItem('activePath', path);
+            }
+            
+            // Set initial active state based on stored path
+            navLinks.forEach(link => {
+                const linkPath = link.getAttribute('href');
+                if (linkPath === currentPath) {
+                    link.classList.add('active');
+                }
+                
+                // Add click event listener
+                link.addEventListener('click', function(e) {
+                    e.preventDefault(); // Prevent default if you're handling navigation via JS
+                    setActiveLink(this);
+                    
+                    // If you want to actually navigate to the page, uncomment this:
+                    // window.location.href = this.getAttribute('href');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aemao Klinic - Building a community of health and Nutrition</title>
+    <link rel="stylesheet" href="../assets/css/appointment-details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="../assets/images/Logo.png" alt="Aemao Klinic">
+        </div>
+
+        <!-- Apps Navigation -->
+        <nav class="nav-section">
+            <h2 class="nav-title">Apps</h2>
+            <ul class="nav-items">
+                <li><a href="#" class="nav-item active"><i class="fas fa-th-large"></i>Dashboard</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-heartbeat"></i>Health Tools</a></li>
+                <li><a href="#" class="nav-item"><i class="far fa-calendar-alt"></i>Appointments</a></li>
+                <li><a href="#" class="nav-item"><i class="far fa-envelope"></i>Messages</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-file-medical"></i>Health Records</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-book"></i>Educational Resources</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-credit-card"></i>Billing and Payments</a></li>
+            </ul>
+        </nav>
+
+        <!-- Account Navigation -->
+        <nav class="nav-section">
+            <h2 class="nav-title">Account</h2>
+            <ul class="nav-items">
+                <li><a href="#" class="nav-item"><i class="fas fa-cog"></i>Settings</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-sign-out-alt"></i>Log Out</a></li>
+                <li><a href="#" class="nav-item"><i class="far fa-user"></i>Profile</a></li>
+            </ul>
+        </nav>
+
+        <!-- User Profile -->
+        <div class="user-profile">
+            <img src="../assets/images/profilepic.png" alt="Olafemi Andrew">
+            <div class="user-info">
+                <h3>Olafemi Andrew</h3>
+                <p>Software Engineer</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="search" placeholder="Search Meal plans, appointment...">
+            </div>
+            <div class="header-right">
+                <div class="notification">
+                    <i class="far fa-bell"></i>
+                </div>
+                <div class="profile-image">
+                    <img src="../assets/images/profilepic.png" alt="Profile">
+                </div>
+            </div>
+        </header>
+        
+        <!-- Add this inside main-content, after the header -->
+        <div class="appointment-container">
+            <div class="appointment-details">
+                <h1>Appointment Details</h1>
+                
+                <!-- Doctor Section -->
+                <div class="detail-section">
+                    <label>Doctor</label>
+                    <div class="detail-content">
+                        <p>Dr. Emily Johnson, Cardiologist</p>
+                    </div>
+                </div>
+
+                <!-- Consultation Type -->
+                <div class="detail-section">
+                    <label>Consultation Type</label>
+                    <div class="detail-content">
+                        <i class="fas fa-video"></i>
+                        <p>Video Call</p>
+                    </div>
+                </div>
+
+                <!-- Date & Time -->
+                <div class="detail-section">
+                    <label>Date & Time</label>
+                    <div class="detail-content">
+                        <i class="far fa-calendar"></i>
+                        <p>September 28, 2024, 10:00 AM</p>
+                    </div>
+                </div>
+
+                <!-- Appointment ID -->
+                <div class="detail-section">
+                    <label>Appointment ID</label>
+                    <div class="detail-content">
+                        <p>#123456789</p>
+                    </div>
+                </div>
+
+                <!-- Appointment Notes -->
+                <div class="detail-section">
+                    <label>Appointment Notes</label>
+                    <div class="detail-content">
+                        <p>Reason for visit: Chest pain and shortness of breath.</p>
+                    </div>
+                </div>
+
+                <!-- Calendar Integration -->
+                <div class="calendar-section">
+                    <label>Add to Calendar</label>
+                    <div class="calendar-dropdown">
+                        <div class="calendar-option">
+                            <img src="../assets/images/Google Icon.png" alt="Google Calendar">
+                            <span>Google Calendar</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button class="btn-primary">
+                        <i class="far fa-clock"></i>
+                        Set Reminder
+                    </button>
+                    <button class="btn-secondary">
+                        <i class="far fa-times-circle"></i>
+                        Cancel Appointment
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>

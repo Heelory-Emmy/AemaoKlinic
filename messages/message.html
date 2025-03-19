@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aemao Klinic - Building a community of health and Nutrition</title>
+    <link rel="stylesheet" href="../assets/css/messages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Menu Toggle Button -->
+    <button class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="../assets/images/Logo.png" alt="Aemao Klinic">
+            <button class="close-menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <!-- Apps Navigation -->
+        <nav class="nav-section">
+            <h2 class="nav-title">Apps</h2>
+            <ul class="nav-items">
+                <li><a href="#" class="nav-item"><i class="fas fa-th-large"></i><span>Dashboard</span></a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-heartbeat"></i><span>Health Tools</span></a></li>
+                <li><a href="#" class="nav-item"><i class="far fa-calendar-alt"></i><span>Appointments</span></a></li>
+                <li><a href="#" class="nav-item active"><i class="far fa-envelope"></i><span>Messages</span></a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-file-medical"></i><span>Health Records</span></a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-book"></i><span>Educational Resources</span></a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-credit-card"></i><span>Billing and Payments</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Account Navigation -->
+        <nav class="nav-section">
+            <h2 class="nav-title">Account</h2>
+            <ul class="nav-items">
+                <li><a href="#" class="nav-item"><i class="fas fa-cog"></i><span>Settings</span></a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-sign-out-alt"></i><span>Log Out</span></a></li>
+                <li><a href="#" class="nav-item"><i class="far fa-user"></i><span>Profile</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- User Profile -->
+        <div class="user-profile">
+            <img src="../assets/images/profilepic.png" alt="Olafemi Andrew">
+            <div class="user-info">
+                <h3>Olafemi Andrew</h3>
+                <p>Software Engineer</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Chat Header -->
+        <header class="chat-header">
+            <div class="chat-user-info">
+                <img src="../assets/images/doctor black.png" alt="Dr Jane Smith">
+                <div class="user-details">
+                    <h2>Dr Jane Smith</h2>
+                    <p>Psychologist</p>
+                </div>
+            </div>
+            <button class="schedule-btn">
+                <i class="far fa-calendar-plus"></i>
+                Schedule an appointment
+            </button>
+        </header>
+
+        <!-- Chat Messages -->
+        <div class="chat-container">
+            <div class="messages-wrapper">
+                <!-- Message types will be added dynamically -->
+                <div class="message received">
+                    <img src="../assets/images/doctor black.png" alt="Dr Jane Smith">
+                    <div class="message-content">
+                        <p>Hey, I'm been good news all day. I met someone special today, she's really pretty. I'd like to talk more about it but it has to be tomorrow as she should grab a drink later.</p>
+                        <span class="time">9:41 AM</span>
+                    </div>
+                </div>
+
+                <div class="message sent">
+                    <div class="message-content">
+                        <p>Call me if you get this okay.</p>
+                        <span class="time">9:45 AM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Input -->
+            <div class="chat-input">
+                <input type="text" placeholder="Type something...">
+                <div class="input-actions">
+                    <button class="attach-btn"><i class="fas fa-paperclip"></i></button>
+                    <button class="emoji-btn"><i class="far fa-smile"></i></button>
+                    <button class="send-btn"><i class="far fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <aside class="chat-sidebar">
+            <div class="doctor-profile">
+                <img src="../assets/images/doctor black.png" alt="Dr Jane Smith">
+                <h3>Dr Jane Smith</h3>
+                <p>Psychologist</p>
+            </div>
+
+            <div class="media-section">
+                <h4>Media</h4>
+                <div class="media-grid">
+                    <!-- Add your media images here -->
+                </div>
+            </div>
+
+            <div class="documents-section">
+                <h4>Documents</h4>
+                <!-- Add your document list here -->
+            </div>
+
+            <div class="links-section">
+                <h4>Links</h4>
+                <!-- Add your links list here -->
+            </div>
+        </aside>
+    </main>
+
+    <script src="./index.js"></script>
+</body>
+</html>

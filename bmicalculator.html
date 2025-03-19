@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aemao Klinic - Building a community of health and Nutrition</title>
+    <link rel="stylesheet" href="./assets/css/bmicalculator.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="./assets/images/Logo.png" alt="Aemao Klinic">
+        </div>
+
+        <!-- Apps Navigation -->
+        <nav class="nav-section">
+            <h2 class="nav-title">Apps</h2>
+            <ul class="nav-items">
+                <li><a href="#" class="nav-item active"><i class="fas fa-th-large"></i>Dashboard</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-heartbeat"></i>Health Tools</a></li>
+                <li><a href="#" class="nav-item"><i class="far fa-calendar-alt"></i>Appointments</a></li>
+                <li><a href="#" class="nav-item"><i class="far fa-envelope"></i>Messages</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-file-medical"></i>Health Records</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-book"></i>Educational Resources</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-credit-card"></i>Billing and Payments</a></li>
+            </ul>
+        </nav>
+
+        <!-- Account Navigation -->
+        <nav class="nav-section">
+            <h2 class="nav-title">Account</h2>
+            <ul class="nav-items">
+                <li><a href="#" class="nav-item"><i class="fas fa-cog"></i>Settings</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-sign-out-alt"></i>Log Out</a></li>
+                <li><a href="#" class="nav-item"><i class="far fa-user"></i>Profile</a></li>
+            </ul>
+        </nav>
+
+        <!-- User Profile -->
+        <div class="user-profile">
+            <img src="./assets/images/profilepic.png" alt="Olafemi Andrew">
+            <div class="user-info">
+                <h3>Olafemi Andrew</h3>
+                <p>Software Engineer</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="search" placeholder="Search Meal plans, appointment...">
+            </div>
+            <div class="header-right">
+                <div class="notification">
+                    <i class="far fa-bell"></i>
+                </div>
+                <div class="profile-image">
+                    <img src="./assets/images/profilepic.png" alt="Profile">
+                </div>
+            </div>
+        </header>
+
+        <!-- Add this inside your main-content section, after the header -->
+        <div class="page-directory">
+            <span>Health Tools</span>
+            <i class="fas fa-chevron-right"></i>
+            <span>Ideal Body Weight (IBW)</span>
+        </div>
+
+        <div class="calculator-container">
+            <!-- Left Section -->
+            <div class="calculator-left">
+                <div class="bmr-calculator">
+                    <div class="gender-selector">
+                        <a href="#" class="gender-btn active" data-gender="male">
+                            <i class="fas fa-male"></i> Male
+                        </a>
+                        <a href="#" class="gender-btn" data-gender="female">
+                            <i class="fas fa-female"></i> Female
+                        </a>
+                    </div>
+
+                    <div class="measurement-input">
+                        <div class="flex-me">
+                            <div class="measurement-qty">
+                                <label>Height</label>
+                                <div class="unit-toggle">
+                                    <button class="active">Ft</button>
+                                    <button>Cm</button>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <input type="number" id="feet" placeholder="5" min="4" max="8">
+                                <span class="unit">'</span>
+                                <input type="number" id="inches" placeholder="11" min="0" max="11">
+                                <span class="unit">"</span>
+                            </div>
+                        </div>
+                        <div class="slider-container">
+                            <input type="range" id="height-slider" min="48" max="96" value="71">
+                        </div>
+                    </div>
+
+                    <div class="measurement-input">
+                        <div class="flex-me">
+                            <div class="measurement-qty">
+                                <label>Weight</label>
+                                <div class="unit-toggle">
+                                    <button class="active">Pounds</button>
+                                    <button>Kg</button>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <input type="number" id="weight" placeholder="70.53">
+                            </div>
+                        </div>
+                        <div class="slider-container">
+                            <input type="range" id="weight-slider" min="40" max="200" value="70">
+                        </div>
+                    </div>
+
+                    <button id="calculate-bmr" class="calculate-btn">Calculate BMR</button>
+                </div>
+                <!-- BMI Classification -->
+                <div class="bmi-classification">
+                    <h3>BMI Classification Chart</h3>
+                    <p class="chart-description">Compare your BMI result with the standard BMI categories to understand where you stand</p>
+                    
+                    <div class="current-bmi">
+                        <span>Your BMI:</span>
+                        <div class="bmi-value">
+                            <span class="number">23.45</span>
+                            <span class="status">- Normal Weight</span>
+                        </div>
+                    </div>
+                    
+                    <div class="classification-bars">
+                        <div class="classification-item">
+                            <div class="label">
+                                <span>Underweight</span>
+                                <span class="range">< 18.5</span>
+                            </div>
+                            <div class="bar underweight">
+                                <span>Increased Health Risks</span>
+                            </div>
+                        </div>
+                        
+                        <div class="classification-item">
+                            <div class="label">
+                                <span>Normal Weight</span>
+                                <span class="range">18.5 - 24.9</span>
+                            </div>
+                            <div class="bar normal">
+                                <span>Low risk of Health Issues</span>
+                            </div>
+                        </div>
+                        
+                        <div class="classification-item">
+                            <div class="label">
+                                <span>Overweight</span>
+                                <span class="range">25 - 29.9</span>
+                            </div>
+                            <div class="bar overweight">
+                                <span>Increased risk of chronic diseases</span>
+                            </div>
+                        </div>
+                        
+                        <div class="classification-item">
+                            <div class="label">
+                                <span>Obesity</span>
+                                <span class="range">30 and above</span>
+                            </div>
+                            <div class="bar obesity">
+                                <span>Chronic conditions like heart disease</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Right Section -->
+            <div class="calculator-right">
+                <!-- BMI Value Section -->
+                <div class="bmi-value">
+                    <div class="value-header">
+                        <span class="value-badge">BMI Value</span>
+                        <div class="bmi-result">
+                            <h2>23.45</h2>
+                            <span class="status">Normal Weight</span>
+                        </div>
+                        <p class="timestamp">Sept 15, 2024, 8:30 AM</p>
+                    </div>
+                    <hr>
+                    <p class="bmi-description">
+                        Your BMI falls within the normal weight range, indicating that your weight is generally considered healthy for your height. However, BMI is a general measure and doesn't consider muscle mass or fat distribution.
+                    </p>
+                    <div class="action-buttons">
+                        <button class="consult-btn">Consult a Doctor</button>
+                        <button class="track-btn">Track My BMI</button>
+                    </div>
+                </div>
+
+                <!-- Health Recommendations Section -->
+                <div class="health-recommendations">
+                    <h3>Your Health Recommendations</h3>
+                    <p class="recommendation-desc">Get personalized tips to help manage your weight and improve your overall health based on your BMI.</p>
+                    
+                    <div class="recommendation-card">
+                        <div class="card-header">
+                            <i class="fas fa-check-circle"></i>
+                            <h4>Weight Maintenance (Normal BMI)</h4>
+                        </div>
+                        <p>To maintain your normal weight, aim for a balanced diet and regular physical activity, including 150 minutes of moderate aerobic activity per week.</p>
+                    </div>
+
+                    <div class="personalized-insights">
+                        <h3>Your Personalized BMI Insights</h3>
+                        <p>Discover what your BMI means for your health and receive tailored recommendations to help you meet your wellness goals.</p>
+                    </div>
+
+                    <div class="recommendation-card">
+                        <div class="card-header">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>Weight Maintenance Recommendation</h4>
+                        </div>
+                        <p>Your BMI indicates a healthy weight range. Continue maintaining your current lifestyle by staying active, eating a balanced diet, and getting regular checkups.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>

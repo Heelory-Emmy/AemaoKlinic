@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aemao Klinic - Building a community of health and Nutrition</title>
+    <link rel="stylesheet" href="../assets/css/consultation-type.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="../assets/images/Logo.png" alt="Aemao Klinic">
+        </div>
+
+        <!-- Apps Navigation -->
+        <nav class="nav-section">
+            <h2 class="nav-title">Apps</h2>
+            <ul class="nav-items">
+                <li><a href="#" class="nav-item active"><i class="fas fa-th-large"></i>Dashboard</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-heartbeat"></i>Health Tools</a></li>
+                <li><a href="#" class="nav-item"><i class="far fa-calendar-alt"></i>Appointments</a></li>
+                <li><a href="#" class="nav-item"><i class="far fa-envelope"></i>Messages</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-file-medical"></i>Health Records</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-book"></i>Educational Resources</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-credit-card"></i>Billing and Payments</a></li>
+            </ul>
+        </nav>
+
+        <!-- Account Navigation -->
+        <nav class="nav-section">
+            <h2 class="nav-title">Account</h2>
+            <ul class="nav-items">
+                <li><a href="#" class="nav-item"><i class="fas fa-cog"></i>Settings</a></li>
+                <li><a href="#" class="nav-item"><i class="fas fa-sign-out-alt"></i>Log Out</a></li>
+                <li><a href="#" class="nav-item"><i class="far fa-user"></i>Profile</a></li>
+            </ul>
+        </nav>
+
+        <!-- User Profile -->
+        <div class="user-profile">
+            <img src="../assets/images/profilepic.png" alt="Olafemi Andrew">
+            <div class="user-info">
+                <h3>Olafemi Andrew</h3>
+                <p>Software Engineer</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="search" placeholder="Search Meal plans, appointment...">
+            </div>
+            <div class="header-right">
+                <div class="notification">
+                    <i class="far fa-bell"></i>
+                </div>
+                <div class="profile-image">
+                    <img src="../assets/images/profilepic.png" alt="Profile">
+                </div>
+            </div>
+        </header>
+
+        <!-- Add this inside main-content, after the header -->
+        <div class="appointment-container">
+            <!-- Title Section -->
+            <div class="appointment-header">
+                <h1>Schedule a <span class="gradient-text">New Appointment</span></h1>
+                <p>Book an appointment with your preferred healthcare provider based on your availability and healthcare needs.</p>
+            </div>
+
+            <!-- Progress Steps -->
+            <div class="progress-steps">
+                <div class="step active">
+                    <p>Search for and choose a doctor or specialist from our MC</p>
+                    <div class="step-icon">
+                        <img src="../assets/images/doctor-01.png" alt="User icon">
+                    </div>
+                </div>
+                <div class="step active">
+                    <p>Select how you would like to attend your appointment</p>
+                    <div class="step-icon">
+                        <img src="../assets/images/medium.png" alt="Video icon">
+                    </div>
+                </div>
+                <div class="step">
+                    <p>Select a Date and Time for Your Appointment</p>
+                    <div class="step-icon">
+                        <img src="../assets/images/calendar-02.png" alt="Calendar icon">
+                    </div>
+                </div>
+                <div class="step">
+                    <p>Review and Confirm Your Appointment Details</p>
+                    <div class="step-icon">
+                        <img src="../assets/images/checkmark-circle-03.png" alt="Check icon">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Consultation Type Selection -->
+            <div class="consultation-section">
+                <h2>Choose Consultation Type</h2>
+                
+                <!-- Dropdown Selection -->
+                <div class="consultation-dropdown">
+                    <div class="dropdown-header">
+                        <img src="../assets/images/video-02.png" alt="Video icon" class="dropdown-icon">
+                        <span class="dropdown-text">Video Call - Attend the appointment from the comfort of your home using a secure video connection</span>
+                        <img src="../assets/images/arrow-down-01.png" alt="Expand" class="dropdown-arrow">
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="navigation-buttons">
+                    <button class="btn-secondary">Go Back</button>
+                    <button class="btn-primary">Continue</button>
+                </div>
+
+                <!-- Radio Options -->
+                <div class="consultation-options">
+                    <label class="option">
+                        <div class="option-left">
+                            <img src="../assets/images/video-02.png" alt="Video call">
+                            <span>Video Call</span>
+                        </div>
+                        <input type="radio" name="consultation" checked>
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="option">
+                        <div class="option-left">
+                            <img src="../assets/images/user.png" alt="In-person">
+                            <span>In-Person Appointment</span>
+                        </div>
+                        <input type="radio" name="consultation">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="option">
+                        <div class="option-left">
+                            <img src="../assets/images/call.png" alt="Phone">
+                            <span>Phone Call</span>
+                        </div>
+                        <input type="radio" name="consultation">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="option">
+                        <div class="option-left">
+                            <img src="../assets/images/bubble-chat.png" alt="Chat">
+                            <span>Chat Consultation</span>
+                        </div>
+                        <input type="radio" name="consultation">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
